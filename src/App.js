@@ -1,7 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [showMessage, setShowMessage] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const handleShowMessageClick = () => {
+    setShowMessage(true);
+    setMessage("Hello from Express backend!");
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +26,8 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleShowMessageClick}>Show Message</button>
+        {showMessage && <p>{message}</p>}
       </header>
     </div>
   );

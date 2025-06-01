@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.App-header button {
+  margin-top: 10px;
+}
+
+.App-header p {
+  margin-top: 10px;
+}
